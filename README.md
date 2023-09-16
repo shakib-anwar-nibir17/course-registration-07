@@ -1,8 +1,13 @@
-# React + Vite
+# This is single page react application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Features
 
-Currently, two official plugins are available:
+Here are some of the key features of our project:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Feature 1:** This is course registration react application where students/users can select courses for purchase. A course can only be purchased a single time.
+- **Feature 2:** Each courses have fixed credit hour
+- **Feature 3:** Each students/users has a allocation for 20 credit hour each and no further credit hour will be added after reaching the allocation amount.
+
+## Managing the state of this project
+
+Welcome to My Awesome Project! This repository contains the source code for an amazing application that does incredible things. We're excited to have you here and hope you find this project useful.
