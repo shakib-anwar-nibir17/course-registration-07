@@ -3,7 +3,7 @@
     "id": 1,
     "title": "Introduction to C Programming",
     "cover": "https://i.ibb.co/4t7DnT9/course1.png",
-    "description": "Learn the fundamentals of C programming language, including data types, control structures, and functions. Gain hands-on experience with coding exercises.",
+    "description": "Learn the fundamentals of C programming language, including data types, control structures, and functions.",
     "creditHour": 3,
     "price": 99.99
   },
