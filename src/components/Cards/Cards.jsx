@@ -44,9 +44,9 @@ const Cards = () => {
   };
 
   return (
-    <div className="container flex gap-12 mx-auto mt-8">
+    <div className="mx-28 flex gap-12 mt-8 py-10">
       <div>
-        <div className="grid gap-8 grid-cols-3">
+        <div className="grid gap-10 grid-cols-3">
           {allCards.map((card, index) => (
             <div
               key={index}
