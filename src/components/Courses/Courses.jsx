@@ -2,7 +2,12 @@ import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 import Course from "../Course/Course";
 
-const Courses = ({ handleAddedCourse }) => {
+const Courses = ({
+  handleAddedCourse,
+  handleAddCredit,
+  handleRemainingCredit,
+  handlePrice,
+}) => {
   const [courses, setCourses] = useState([]);
   useEffect(() => {
     fetch("data.json")
@@ -15,6 +20,9 @@ const Courses = ({ handleAddedCourse }) => {
         {courses.map((course) => (
           <Course
             handleAddedCourse={handleAddedCourse}
+            handleAddCredit={handleAddCredit}
+            handleRemainingCredit={handleRemainingCredit}
+            handlePrice={handlePrice}
             key={course.id}
             course={course}
           ></Course>
@@ -25,5 +33,8 @@ const Courses = ({ handleAddedCourse }) => {
 };
 Courses.propTypes = {
   handleAddedCourse: PropTypes.func,
+  handleAddCredit: PropTypes.func,
+  handleRemainingCredit: PropTypes.func,
+  handlePrice: PropTypes.func,
 };
 export default Courses;
