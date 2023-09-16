@@ -11,22 +11,26 @@ function App() {
   const [price, setPrice] = useState(0);
 
   const handleAddedCourse = (course) => {
-    // const isExist = addedCourse.find((item) => item.id == course.id);
-    // if (isExist) {
-    //   return alert("already exist");
-    // } else {
-    //   const newAddedCourse = [...addedCourse, course];
-    //   setAddedCourse(newAddedCourse);
-    // }
     const newAddedCourse = [...addedCourse, course];
     setAddedCourse(newAddedCourse);
   };
   const handleAddCredit = (credit) => {
-    setCreditAdded(creditAdded + credit);
+    const finalTotalCredit = creditAdded + credit;
+    if (finalTotalCredit > 20) {
+      return alert("credit limit reached");
+    } else {
+      setCreditAdded(finalTotalCredit);
+    }
   };
   const handleRemainingCredit = (credit2) => {
-    setRemainingCredit(remainingCredit - credit2);
+    const finalTotalCredit2 = remainingCredit - credit2;
+    if (finalTotalCredit2 < 0) {
+      return;
+    } else {
+      setRemainingCredit(finalTotalCredit2);
+    }
   };
+
   const handlePrice = (cost) => {
     setPrice(price + cost);
   };

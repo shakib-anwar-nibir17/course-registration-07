@@ -16,17 +16,12 @@ const Course = ({
     if (isExist) {
       return alert("already exist");
     } else {
-      // const newAddedCourse = [...addedCourse, course];
-      // setAddedCourse(newAddedCourse);
-      handleAddCredit(creditHour);
       handleAddedCourse(course);
-      handleRemainingCredit(creditHour);
       handlePrice(price);
+
+      handleAddCredit(creditHour);
+      handleRemainingCredit(creditHour);
     }
-    // handleAddCredit(creditHour);
-    // handleAddedCourse(course);
-    // handleRemainingCredit(creditHour);
-    // handlePrice(price);
   };
   return (
     <div className="w-[400px] rounded-xl space-y-5 p-4 bg-white">
