@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "Introduction to C Programming",
+    "cover": "https://i.ibb.co/4t7DnT9/course1.png",
+    "description": "Learn the fundamentals of C programming language, including data types, control structures, and functions. Gain hands-on experience with coding exercises.",
+    "creditHour": 3,
+    "price": 99.99
+  },
+  {
+    "id": 2,
+    "title": "Introduction to Algorithms",
+    "cover": "https://i.ibb.co/KhJGvFn/course2.png",
+    "description": "Explore the basics of algorithms and problem-solving. Learn algorithm design techniques and analyze the efficiency of algorithms.",
+    "creditHour": 4,
+    "price": 119.99
+  },
+  {
+    "id": 3,
+    "title": "Introduction to C++ for DSA",
+    "cover": "https://i.ibb.co/myBL2yw/course3.png",
+    "description": "Learn C++ programming for Data Structures and Algorithms. Cover topics like classes, inheritance, and templates.",
+    "creditHour": 4,
+    "price": 89.99
+  },
+  {
+    "id": 4,
+    "title": "Basic Data Structures",
+    "cover": "https://i.ibb.co/qY0W69d/course4.png",
+    "description": "Study fundamental data structures like arrays, linked lists, stacks, and queues. Apply these concepts to real-world problems.",
+    "creditHour": 3,
+    "price": 79.99
+  },
+  {
+    "id": 5,
+    "title": "Introduction to OOP Python",
+    "cover": "https://i.ibb.co/LpbLCty/course5.png",
+    "description": "Discover object-oriented programming with Python. Learn to create classes, objects, and inheritance in Python applications.",
+    "creditHour": 3,
+    "price": 69.99
+  },
+  {
+    "id": 6,
+    "title": "Software Engineering",
+    "cover": "https://i.ibb.co/CbhJvT3/course6.png",
+    "description": "Learn software engineering principles and best practices, including requirements analysis, design, testing, and project management.",
+    "creditHour": 4,
+    "price": 129.99
+  },
+  {
+    "id": 7,
+    "title": "AWS, Cloud Computing",
+    "cover": "https://i.ibb.co/ySWjV0z/course7.png",
+    "description": "Explore cloud computing and Amazon Web Services (AWS). Understand cloud infrastructure, services, and deployment.",
+    "creditHour": 3,
+    "price": 99.99
+  },
+  {
+    "id": 8,
+    "title": "Database (MySQL)",
+    "cover": "https://i.ibb.co/jMhWg2F/course8.png",
+    "description": "Master MySQL database management and SQL. Learn to design and optimize databases for various applications.",
+    "creditHour": 4,
+    "price": 89.99
+  },
+  {
+    "id": 9,
+    "title": "Problem-Solving Part",
+    "cover": "https://i.ibb.co/wK4ptv2/course9.png",
+    "description": "Enhance your problem-solving skills through algorithmic challenges and puzzles. Improve your critical thinking and coding abilities.",
+    "creditHour": 2,
+    "price": 59.99
+  }
+]
