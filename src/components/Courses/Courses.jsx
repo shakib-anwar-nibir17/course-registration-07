@@ -1,7 +1,8 @@
+import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 import Course from "../Course/Course";
 
-const Courses = () => {
+const Courses = ({ handleAddedCourse }) => {
   const [courses, setCourses] = useState([]);
   useEffect(() => {
     fetch("data.json")
@@ -10,14 +11,19 @@ const Courses = () => {
   }, []);
   return (
     <div>
-      {/* <h3>Courses: {courses.length}</h3> */}
       <div className="grid grid-cols-3 gap-5">
         {courses.map((course) => (
-          <Course key={course.id} course={course}></Course>
+          <Course
+            handleAddedCourse={handleAddedCourse}
+            key={course.id}
+            course={course}
+          ></Course>
         ))}
       </div>
     </div>
   );
 };
-
+Courses.propTypes = {
+  handleAddedCourse: PropTypes.func,
+};
 export default Courses;

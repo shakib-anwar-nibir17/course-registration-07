@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
 import { FiDollarSign } from "react-icons/fi";
 import { TfiBook } from "react-icons/tfi";
-const Course = ({ course }) => {
+const Course = ({ course, handleAddedCourse }) => {
   const { cover, title, description, creditHour, price } = course;
   return (
-    <div className="w-[400px] border-red-300 border-2 rounded-xl space-y-5 p-4 bg-white">
+    <div className="w-[400px] rounded-xl space-y-5 p-4 bg-white">
       <img
         className="w-full"
         src={cover}
@@ -22,7 +22,10 @@ const Course = ({ course }) => {
         </p>
       </div>
       <div className="mt-auto flex justify-center">
-        <button className="bg-[#2F80ED] text-white w-3/4 mx-auto p-3 rounded-lg text-bold">
+        <button
+          onClick={() => handleAddedCourse(course)}
+          className="bg-[#2F80ED] text-white w-3/4 mx-auto p-3 rounded-lg text-bold"
+        >
           Select
         </button>
       </div>
@@ -32,5 +35,6 @@ const Course = ({ course }) => {
 
 Course.propTypes = {
   course: PropTypes.object.isRequired,
+  handleAddedCourse: PropTypes.func,
 };
 export default Course;
