@@ -3,6 +3,8 @@ import "./App.css";
 import Cart from "./components/Cart/Cart";
 import Courses from "./components/Courses/Courses";
 import Header from "./components/Header/Header";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [addedCourse, setAddedCourse] = useState([]);
@@ -17,10 +19,11 @@ function App() {
   const handleAddCredit = (credit) => {
     const finalTotalCredit = creditAdded + credit;
     if (finalTotalCredit > 20) {
-      return alert("credit limit reached");
-    } else {
-      setCreditAdded(finalTotalCredit);
+      return toast.info("Credit limit reached", {
+        position: toast.POSITION.TOP_CENTER,
+      });
     }
+    setCreditAdded(finalTotalCredit);
   };
   const handleRemainingCredit = (credit2) => {
     const finalTotalCredit2 = remainingCredit - credit2;
@@ -34,10 +37,12 @@ function App() {
   const handlePrice = (cost) => {
     setPrice(price + cost);
   };
+
   return (
     <>
       <div className="bg-[#F3F3F3]">
         <Header></Header>
+        <ToastContainer />
         <div className="container mx-auto space-x-5  flex mt-10">
           <Courses
             handleAddedCourse={handleAddedCourse}

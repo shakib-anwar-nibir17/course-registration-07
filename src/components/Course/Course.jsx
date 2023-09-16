@@ -1,6 +1,8 @@
 import PropTypes from "prop-types";
 import { FiDollarSign } from "react-icons/fi";
 import { TfiBook } from "react-icons/tfi";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const Course = ({
   course,
   handleAddedCourse,
@@ -14,15 +16,17 @@ const Course = ({
   const handleButtonClicked = () => {
     const isExist = addedCourse.find((item) => item.id == course.id);
     if (isExist) {
-      return alert("already exist");
+      return toast.warn("item already exist", {
+        position: toast.POSITION.TOP_CENTER,
+      });
     } else {
       handleAddedCourse(course);
-      handlePrice(price);
-
       handleAddCredit(creditHour);
       handleRemainingCredit(creditHour);
+      handlePrice(price);
     }
   };
+
   return (
     <div className="w-[400px] rounded-xl space-y-5 p-4 bg-white">
       <img
@@ -48,6 +52,7 @@ const Course = ({
         >
           Select
         </button>
+        <ToastContainer />
       </div>
     </div>
   );
