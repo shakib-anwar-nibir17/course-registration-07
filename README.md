@@ -14,35 +14,20 @@ State is a key feature in React that is used to manage and store data within a c
 
 ### State Management of the project
 
-- **State 1:** const [addedCourse, setAddedCourse] = useState([]);
-  const handleAddedCourse = (course) => {
-  const newAddedCourse = [...addedCourse, course];
-  setAddedCourse(newAddedCourse);
-  };
+- **State 1:** const [allCards, setAllCards] = useState([]);
 
-This state is passed on to the Courses component and to handle this state variable and function to update it , a new handle function was created named "handleAddedCourse" and this was passed onto the "Courses" component. Then it was passed onto the "Course" component and was received as a props and was added inside the handleClicked function to update the state of function.
+A state variable called allCards has an empty array as its initial value.
+The function setAllCards is used to modify the allCards state. Normally, you call it whenever you wish to modify the value of allCards. This function receives the new value as an argument. After fetching data from the local json file, the available data are stored via allCard array in which map function is applied to access the objects and define values in the return function dynamically.
 
-- **State 2:** const [creditAdded, setCreditAdded] = useState(0);
-  const handleAddCredit = (credit) => {
-  const finalTotalCredit = creditAdded + credit;
-  if (finalTotalCredit > 20) {
-  return toast.info("Credit limit reached", {
-  position: toast.POSITION.TOP_CENTER,
-  });
-  }
-  setCreditAdded(finalTotalCredit);
-  };
+- **State 2:** const [selectedCards, setSelectedCards] = useState([]) ;
 
-Similar to the previous state this state was also passed to Course component was received as props to update the total credit hour. The useState stores the data of the courses that are being added to the cart and update the value accordingly.
+Another state variable with an empty array as its initial value is selectedCards.
+The function used to modify the selectedCards state is called setSelectedCards. It is employed to alter the list of chosen cards. It has a handle function which selects the array and store it inside the selectedCard array and by using find function the data can be accessed for conditional rendering.
 
 - **State 3:** const [remainingCredit, setRemainingCredit] = useState(20)
-  const handleRemainingCredit = (credit2) => {
-  const finalTotalCredit2 = remainingCredit - credit2;
-  if (finalTotalCredit2 < 0) {
-  return;
-  } else {
-  setRemainingCredit(finalTotalCredit2);
-  }
-  };
 
-Similar to the previous state it updates the remaining credit hour after being received as props inside the Course component.
+remainingCredit is a state variable with the default value of 20.The function remainingCredit is used to update the remainingCredit state. When cards are picked or deselected, it changes the remaining credit value.
+
+- **State 4:** const [addedCredit, setAddedCredit] = useState(0)
+
+This state variable, addedCredit, appears to be used to maintain track of the total credit hours linked with the cards in the React component that have been selected. As you choose cards, it may use setAddedCredit to change this state to reflect the total credit hours added to the user's cart.
