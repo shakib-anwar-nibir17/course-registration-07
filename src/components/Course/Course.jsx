@@ -7,14 +7,26 @@ const Course = ({
   handleAddCredit,
   handleRemainingCredit,
   handlePrice,
+  addedCourse,
 }) => {
   const { cover, title, description, creditHour, price } = course;
 
   const handleButtonClicked = () => {
-    handleAddCredit(creditHour);
-    handleAddedCourse(course);
-    handleRemainingCredit(creditHour);
-    handlePrice(price);
+    const isExist = addedCourse.find((item) => item.id == course.id);
+    if (isExist) {
+      return alert("already exist");
+    } else {
+      // const newAddedCourse = [...addedCourse, course];
+      // setAddedCourse(newAddedCourse);
+      handleAddCredit(creditHour);
+      handleAddedCourse(course);
+      handleRemainingCredit(creditHour);
+      handlePrice(price);
+    }
+    // handleAddCredit(creditHour);
+    // handleAddedCourse(course);
+    // handleRemainingCredit(creditHour);
+    // handlePrice(price);
   };
   return (
     <div className="w-[400px] rounded-xl space-y-5 p-4 bg-white">
@@ -52,5 +64,6 @@ Course.propTypes = {
   handleAddCredit: PropTypes.func,
   handleRemainingCredit: PropTypes.func,
   handlePrice: PropTypes.func,
+  addedCourse: PropTypes.array,
 };
 export default Course;

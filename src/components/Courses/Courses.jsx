@@ -7,6 +7,7 @@ const Courses = ({
   handleAddCredit,
   handleRemainingCredit,
   handlePrice,
+  addedCourse,
 }) => {
   const [courses, setCourses] = useState([]);
   useEffect(() => {
@@ -23,6 +24,7 @@ const Courses = ({
             handleAddCredit={handleAddCredit}
             handleRemainingCredit={handleRemainingCredit}
             handlePrice={handlePrice}
+            addedCourse={addedCourse}
             key={course.id}
             course={course}
           ></Course>
@@ -36,5 +38,6 @@ Courses.propTypes = {
   handleAddCredit: PropTypes.func,
   handleRemainingCredit: PropTypes.func,
   handlePrice: PropTypes.func,
+  addedCourse: PropTypes.array,
 };
 export default Courses;

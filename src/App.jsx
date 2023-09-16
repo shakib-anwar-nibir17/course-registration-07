@@ -9,10 +9,17 @@ function App() {
   const [creditAdded, setCreditAdded] = useState(0);
   const [remainingCredit, setRemainingCredit] = useState(20);
   const [price, setPrice] = useState(0);
+
   const handleAddedCourse = (course) => {
+    // const isExist = addedCourse.find((item) => item.id == course.id);
+    // if (isExist) {
+    //   return alert("already exist");
+    // } else {
+    //   const newAddedCourse = [...addedCourse, course];
+    //   setAddedCourse(newAddedCourse);
+    // }
     const newAddedCourse = [...addedCourse, course];
     setAddedCourse(newAddedCourse);
-    // console.log(course);
   };
   const handleAddCredit = (credit) => {
     setCreditAdded(creditAdded + credit);
@@ -33,6 +40,7 @@ function App() {
             handleRemainingCredit={handleRemainingCredit}
             handleAddCredit={handleAddCredit}
             handlePrice={handlePrice}
+            addedCourse={addedCourse}
           ></Courses>
           <div>
             <Cart
