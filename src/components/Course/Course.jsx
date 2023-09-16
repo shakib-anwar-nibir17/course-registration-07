@@ -4,7 +4,7 @@ import { TfiBook } from "react-icons/tfi";
 const Course = ({ course }) => {
   const { cover, title, description, creditHour, price } = course;
   return (
-    <div className="w-[400px] border-red-300 border-2 rounded-xl space-y-5 p-4">
+    <div className="w-[400px] border-red-300 border-2 rounded-xl space-y-5 p-4 bg-white">
       <img
         className="w-full"
         src={cover}
